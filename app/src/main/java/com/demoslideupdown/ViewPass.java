@@ -1,0 +1,1 @@
+package com.demoslideupdown;import android.view.View;public interface ViewPass {    void passView(View view);}

@@ -50,15 +50,12 @@ public class BeerAdapter extends RecyclerView.Adapter<BeerAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private AppCompatTextView tvName;
-        private AppCompatCheckBox cbCheckItem;
 
         private void bind(Beer beer) {
-            cbCheckItem.setChecked(!beer.isChecked());
-            tvName.setText(beer.getName());
+           tvName.setText(beer.getName());
         }
         private ViewHolder(View view) {
             super(view);
-            cbCheckItem = view.findViewById(R.id.cbCheckItem);
             tvName=view.findViewById(R.id.tvName);
         }
     }

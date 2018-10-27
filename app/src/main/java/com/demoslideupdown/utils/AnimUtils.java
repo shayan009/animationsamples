@@ -1,4 +1,4 @@
-package com.demoslideupdown;
+package com.demoslideupdown.utils;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -7,7 +7,7 @@ import android.view.View;
 
 public class AnimUtils {
 
-    private static int mShortAnimationDuration=150;
+    private static int mShortAnimationDuration=500;
     public static void animateViewToHide(final View view){
         view.animate()
                 .alpha(0f)

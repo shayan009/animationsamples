@@ -12,18 +12,18 @@ import android.view.ViewGroup;
 import java.util.List;
 
 public class DrinksAdapter  extends RecyclerView.Adapter<DrinksAdapter.ViewHolder> {
-    private List<Beer> beerList;
+    private List<Drink> beerList;
     Context context;
 
     public DrinksAdapter(Context context) {
         this.context = context;
     }
-    public DrinksAdapter(Context context,List<Beer> beerList) {
+    public DrinksAdapter(Context context,List<Drink> beerList) {
         this.context = context;
         this.beerList = beerList;
     }
 
-    public void setBeerList(List<Beer> beerList) {
+    public void setBeerList(List<Drink> beerList) {
         this.beerList = beerList;
     }
 
@@ -48,15 +48,12 @@ public class DrinksAdapter  extends RecyclerView.Adapter<DrinksAdapter.ViewHolde
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         private AppCompatTextView tvName;
-        private AppCompatCheckBox cbCheckItem;
 
-        private void bind(Beer beer) {
-            cbCheckItem.setChecked(!beer.isChecked());
+        private void bind(Drink beer) {
             tvName.setText(beer.getName());
         }
         private ViewHolder(View view) {
             super(view);
-            cbCheckItem = view.findViewById(R.id.cbCheckItem);
             tvName=view.findViewById(R.id.tvName);
         }
     }

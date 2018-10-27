@@ -3,11 +3,6 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
-        <entry key="imageWizard">
-          <value>
-            <PersistentState />
-          </value>
-        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -23,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_check_circle_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_chevron_right_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,9 +28,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="926ff2" />
-                            <entry key="outputName" value="ic_check_circle" />
-                            <entry key="sourceFile" value="C:\Users\Poulami\Downloads\check-mark-in-a-circle (2).svg" />
+                            <entry key="color" value="a61891" />
+                            <entry key="outputName" value="ic_chevron_right_black_24dp" />
+                            <entry key="sourceFile" value="C:\Users\shayan" />
                           </map>
                         </option>
                       </PersistentState>

@@ -1,15 +1,17 @@
 package com.demoslideupdown;
 
+import java.util.List;
+
 public class Beer {
 
     private int id;
     private String name;
-    private boolean isChecked;
+          private List<Drink> drink;
 
-    public Beer(int id, String name, boolean isChecked) {
+    public Beer(int id, String name,List<Drink> drink) {
         this.id = id;
         this.name = name;
-        this.isChecked = isChecked;
+        this.drink=drink;
     }
 
     public int getId() {
@@ -20,7 +22,7 @@ public class Beer {
         return name;
     }
 
-    public boolean isChecked() {
-        return isChecked;
+    public List<Drink> getDrink () {
+        return drink;
     }
 }
