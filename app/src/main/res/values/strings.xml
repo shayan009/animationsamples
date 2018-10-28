@@ -45,10 +45,10 @@
     <string name="pix_subtext">Press Trust of India | Sunday October 28, 2018, New Delhi</string>
     <string name="pix_summarytext">A 20-year-old civil service aspirant allegedly hung herself to death at her rented flat in central Delhi\'s Karol Bagh area, police said Sunday.</string>
 
-    <!--//data8
+    //data8
     <string name="i6_titletext">In Japan, PM Modi Gets A Grand Welcome - And Chopsticks Lessons</string>
     <string name="i6_image_url"><![CDATA[https://c.ndtvimg.com/2018–10/93obundc_pm-modi-shinzo-abe-twitter_120x90_28_October_18.jpg?downsize=150:113&output-quality=70&output-format=webp]]></string>
     <string name="i6_subtext">Edited by Aditya Sharma | Sunday October 28, 2018, New Delhi</string>
-    <string name="i6_summarytext">Prime Minister Narendra Modi and his Japanese counterpart Shinzo Abe met for the twelfth time today since their first meeting in September 2014.</string>-->
+    <string name="i6_summarytext">Prime Minister Narendra Modi and his Japanese counterpart Shinzo Abe met for the twelfth time today since their first meeting in September 2014.</string>
     
 </resources>
