@@ -28,7 +28,6 @@ import static com.demoslideupdown.utils.AnimUtils.slideUp;
 
 public class ExpandableListAnimated extends AppCompatActivity {
 
-
     @BindView(R.id.rvBeerList)
     RecyclerView rvBeerList;
     @BindView(R.id.clLiquor)
