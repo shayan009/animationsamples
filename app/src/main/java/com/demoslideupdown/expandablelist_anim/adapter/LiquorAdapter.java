@@ -1,5 +1,4 @@
 package com.demoslideupdown.expandablelist_anim.adapter;
-
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
@@ -23,7 +22,7 @@ import static com.demoslideupdown.utils.AnimUtils.*;
 public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder> {
     private List<Beer> beerList;
 
-    List<View> views = new ArrayList<>();
+  private   List<View> views = new ArrayList<>();
 
     public LiquorAdapter (List<Beer> beerList) {
         this.beerList = beerList;
@@ -51,7 +50,7 @@ public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        
+
         @BindView(R.id.tvName)
         AppCompatTextView tvName;
         @BindView(R.id.clItem)
@@ -100,7 +99,7 @@ public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder
             rvDrinks.setHasFixedSize(false);
 
             if (beer.getDrink() != null && beer.getDrink().size() > 0) {
-                DrinksAdapter beerAdapter = new DrinksAdapter(context, beer.getDrink());
+                DrinksAdapter beerAdapter = new DrinksAdapter(beer.getDrink());
                 rvDrinks.setAdapter(beerAdapter);
             }
 

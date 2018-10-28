@@ -1,6 +1,4 @@
 package com.demoslideupdown.expandablelist_anim.adapter;
-
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
@@ -13,19 +11,12 @@ import com.demoslideupdown.R;
 
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class DrinksAdapter  extends RecyclerView.Adapter<DrinksAdapter.ViewHolder> {
     private List<Drink> beerList;
-    Context context;
-
-    public DrinksAdapter(Context context) {
-        this.context = context;
-    }
-    public DrinksAdapter(Context context,List<Drink> beerList) {
-        this.context = context;
-        this.beerList = beerList;
-    }
-
-    public void setBeerList(List<Drink> beerList) {
+     DrinksAdapter(List<Drink> beerList) {
         this.beerList = beerList;
     }
 
@@ -49,14 +40,16 @@ public class DrinksAdapter  extends RecyclerView.Adapter<DrinksAdapter.ViewHolde
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private AppCompatTextView tvName;
+
+        @BindView(R.id.tvName)
+        AppCompatTextView tvName;
 
         private void bind(Drink beer) {
             tvName.setText(beer.getName());
         }
         private ViewHolder(View view) {
             super(view);
-            tvName=view.findViewById(R.id.tvName);
+            ButterKnife.bind(this,view);
         }
     }
 }
