@@ -19,7 +19,7 @@
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Animated Expandable List"
+            android:text="Expandable List"
             android:paddingStart="@dimen/_10dp"
             android:gravity="center"
             android:textColor="@android:color/white"

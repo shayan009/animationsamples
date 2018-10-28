@@ -14,27 +14,24 @@ import com.demoslideupdown.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 import static com.demoslideupdown.utils.AnimUtils.*;
 
-public class LiquorAdapter  extends RecyclerView.Adapter<LiquorAdapter.ViewHolder> {
+public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder> {
     private List<Beer> beerList;
-    Context context;
-             List<View> views=new ArrayList<>();
-    public LiquorAdapter(Context context) {
-        this.context = context;
-    }
-    public LiquorAdapter(Context context,List<Beer> beerList) {
-        this.context = context;
-        this.beerList = beerList;
-    }
 
-    public void setBeerList(List<Beer> beerList) {
+    List<View> views = new ArrayList<>();
+
+    public LiquorAdapter (List<Beer> beerList) {
         this.beerList = beerList;
     }
 
     @NonNull
     @Override
-    public LiquorAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public LiquorAdapter.ViewHolder onCreateViewHolder (@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_liquor, parent,
                 false);
 
@@ -43,71 +40,77 @@ public class LiquorAdapter  extends RecyclerView.Adapter<LiquorAdapter.ViewHolde
 
 
     @Override
-    public void onBindViewHolder(@NonNull LiquorAdapter.ViewHolder holder, final int position) {
-        holder.bind(beerList.get(position),position);
+    public void onBindViewHolder (@NonNull LiquorAdapter.ViewHolder holder, final int position) {
+        holder.bind(beerList.get(position));
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount () {
         return beerList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
+        
+        @BindView(R.id.tvName)
+        AppCompatTextView tvName;
+        @BindView(R.id.clItem)
+        ConstraintLayout clItem;
+        @BindView(R.id.ivItem)
+        AppCompatImageView ivItem;
+        @BindView(R.id.rvDrinks)
+        RecyclerView rvDrinks;
+
         private final View view;
-        private AppCompatTextView tvName;
-        private ConstraintLayout clItem;
-        private AppCompatImageView ivItem;
-        private RecyclerView rvDrinks;
-        private boolean drinkBoolean=true;
-        private void bind(Beer beer, final int pos) {
+        private final Context context;
+        private boolean drinkBoolean = true;
+
+        @OnClick(R.id.clItem)
+        void onCLickItem (ConstraintLayout constraintLayout) {
+            final int ti = getItemCount();
+            int pos = getAdapterPosition();
+            if (drinkBoolean) {
+                ivItem.animate().rotation(-180).start();
+                if (pos != ti - 1) {
+                    slideDown(views.get(pos + 1), rvDrinks);
+                } else {
+                    animateViewToHide(rvDrinks);
+                }
+
+                drinkBoolean = false;
+            } else {
+                ivItem.animate().rotation(0).start();
+                if (pos != ti - 1) {
+                    slideUp(views.get(pos + 1), rvDrinks);
+                } else {
+                    animateViewToShow(rvDrinks);
+                }
+                drinkBoolean = true;
+            }
+        }
+
+        private void bind (Beer beer) {
+
             tvName.setText(beer.getName());
             view.setId(beer.getId());
             views.add(view);
-         
-            GridLayoutManager gridLayoutManager = new GridLayoutManager(context,2,LinearLayoutManager.HORIZONTAL,false);
+
+            GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 2, LinearLayoutManager.HORIZONTAL, false);
             rvDrinks.setLayoutManager(gridLayoutManager);
             rvDrinks.setHasFixedSize(false);
-         final int ti=   getItemCount();
-            if(beer.getDrink()!=null&&beer.getDrink().size()>0){
-                DrinksAdapter beerAdapter= new  DrinksAdapter(context, beer.getDrink());
+
+            if (beer.getDrink() != null && beer.getDrink().size() > 0) {
+                DrinksAdapter beerAdapter = new DrinksAdapter(context, beer.getDrink());
                 rvDrinks.setAdapter(beerAdapter);
-                clItem.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        if(drinkBoolean){
-                            ivItem.animate().rotation(-180).start();
-                            if(pos!=ti-1){
-                                slideDown(views.get(pos+1),rvDrinks);
-                            }   else
-                            {
-                                animateViewToHide(rvDrinks);
-                            }
-
-                            drinkBoolean=false;
-                        } else{
-                            ivItem.animate().rotation(0).start();
-                            if(pos!=ti-1){
-                                slideUp(views.get(pos+1),rvDrinks);
-                            }
-                            else{
-                                animateViewToShow(rvDrinks);
-                            }
-
-                            drinkBoolean=true;
-                        }
-                    }
-                });
             }
 
         }
 
-        private ViewHolder(View view) {
+        private ViewHolder (View view) {
             super(view);
-            this.view=view;
-            clItem = view.findViewById(R.id.clItem);
-            tvName=view.findViewById(R.id.tvName);
-            ivItem=view.findViewById(R.id.ivItem);
-            rvDrinks=view.findViewById(R.id.rvDrinks);
+            this.view = view;
+            context = view.getContext();
+            ButterKnife.bind(this, view);
         }
     }
 }
