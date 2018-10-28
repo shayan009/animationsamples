@@ -1,14 +1,19 @@
 package com.demoslideupdown.expandablelist_anim.adapter;
+
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.*;
+import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.demoslideupdown.expandablelist_anim.model.Beer;
 import com.demoslideupdown.R;
+import com.demoslideupdown.expandablelist_anim.model.Beer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,12 +22,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-import static com.demoslideupdown.utils.AnimUtils.*;
+import static com.demoslideupdown.utils.AnimUtils.animateViewToHide;
+import static com.demoslideupdown.utils.AnimUtils.animateViewToShow;
+import static com.demoslideupdown.utils.AnimUtils.slideDown;
+import static com.demoslideupdown.utils.AnimUtils.slideUp;
 
 public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder> {
     private List<Beer> beerList;
 
-  private   List<View> views = new ArrayList<>();
+    private List<View> views = new ArrayList<>();
 
     public LiquorAdapter (List<Beer> beerList) {
         this.beerList = beerList;
@@ -51,6 +59,8 @@ public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder {
 
 
+        private final View view;
+        private final Context context;
         @BindView(R.id.tvName)
         AppCompatTextView tvName;
         @BindView(R.id.clItem)
@@ -59,10 +69,14 @@ public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder
         AppCompatImageView ivItem;
         @BindView(R.id.rvDrinks)
         RecyclerView rvDrinks;
-
-        private final View view;
-        private final Context context;
         private boolean drinkBoolean = true;
+
+        private ViewHolder (View view) {
+            super(view);
+            this.view = view;
+            context = view.getContext();
+            ButterKnife.bind(this, view);
+        }
 
         @OnClick(R.id.clItem)
         void onCLickItem (ConstraintLayout constraintLayout) {
@@ -103,13 +117,6 @@ public class LiquorAdapter extends RecyclerView.Adapter<LiquorAdapter.ViewHolder
                 rvDrinks.setAdapter(beerAdapter);
             }
 
-        }
-
-        private ViewHolder (View view) {
-            super(view);
-            this.view = view;
-            context = view.getContext();
-            ButterKnife.bind(this, view);
         }
     }
 }

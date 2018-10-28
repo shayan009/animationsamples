@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements OnOptionClickList
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         context = this;
-        
+
         recyclerOptions.setLayoutManager(new LinearLayoutManager(context));
         recyclerOptions.setHasFixedSize(true);
         recyclerOptions.setAdapter(new OptionAdapter(this));
