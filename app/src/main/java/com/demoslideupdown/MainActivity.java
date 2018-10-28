@@ -6,10 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 import android.widget.Toast;
 
 import com.demoslideupdown.expandablelist_anim.activity.ExpandableListAnimated;
+import com.demoslideupdown.shimmer.activity.ShimmerActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity implements OnOptionClickList
         switch (data.getId()) {
             case 1:
                 startActivity(new Intent(context, ExpandableListAnimated.class));
+                break;
+            case 2:
+                startActivity(new Intent(context,ShimmerActivity.class));
                 break;
             default:
                 Toast.makeText(context, "Wrong Options", Toast.LENGTH_SHORT).show();

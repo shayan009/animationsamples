@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.demoslideupdown">
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".expandablelist_anim.activity.ExpandableListAnimated" />
-        <activity android:name=".shimmer.ShimmerActivity"/>
+        <activity android:name=".shimmer.activity.ShimmerActivity"/>
     </application>
 
 </manifest>
