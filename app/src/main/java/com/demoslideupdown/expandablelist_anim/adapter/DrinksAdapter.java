@@ -1,45 +1,45 @@
-package com.demoslideupdown;
+package com.demoslideupdown.expandablelist_anim.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.AppCompatCheckBox;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.demoslideupdown.expandablelist_anim.model.Drink;
+import com.demoslideupdown.R;
+
 import java.util.List;
 
-
-
-
-public class BeerAdapter extends RecyclerView.Adapter<BeerAdapter.ViewHolder> {
-    private List<Beer> beerList;
+public class DrinksAdapter  extends RecyclerView.Adapter<DrinksAdapter.ViewHolder> {
+    private List<Drink> beerList;
     Context context;
 
-    public BeerAdapter(Context context) {
+    public DrinksAdapter(Context context) {
         this.context = context;
     }
-    public BeerAdapter(Context context,List<Beer> beerList) {
+    public DrinksAdapter(Context context,List<Drink> beerList) {
         this.context = context;
         this.beerList = beerList;
     }
 
-    public void setBeerList(List<Beer> beerList) {
+    public void setBeerList(List<Drink> beerList) {
         this.beerList = beerList;
     }
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DrinksAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_beer, parent,
                 false);
-        return new ViewHolder(view);
+        return new DrinksAdapter.ViewHolder(view);
     }
 
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull DrinksAdapter.ViewHolder holder, final int position) {
         holder.bind(beerList.get(position));
     }
 
@@ -51,8 +51,8 @@ public class BeerAdapter extends RecyclerView.Adapter<BeerAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder {
         private AppCompatTextView tvName;
 
-        private void bind(Beer beer) {
-           tvName.setText(beer.getName());
+        private void bind(Drink beer) {
+            tvName.setText(beer.getName());
         }
         private ViewHolder(View view) {
             super(view);

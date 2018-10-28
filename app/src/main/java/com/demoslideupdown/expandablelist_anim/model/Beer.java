@@ -1,4 +1,4 @@
-package com.demoslideupdown;
+package com.demoslideupdown.expandablelist_anim.model;
 
 import java.util.List;
 

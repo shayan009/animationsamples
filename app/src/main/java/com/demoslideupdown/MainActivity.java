@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.demoslideupdown.expandablelist_anim.activity.ExpandableListAnimated;
+
 public class MainActivity extends AppCompatActivity {
 
 

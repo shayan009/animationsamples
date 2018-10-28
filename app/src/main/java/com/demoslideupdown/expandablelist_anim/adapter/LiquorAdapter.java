@@ -1,4 +1,4 @@
-package com.demoslideupdown;
+package com.demoslideupdown.expandablelist_anim.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -7,6 +7,9 @@ import android.support.v7.widget.*;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.demoslideupdown.expandablelist_anim.model.Beer;
+import com.demoslideupdown.R;
 
 import java.util.ArrayList;
 import java.util.List;
