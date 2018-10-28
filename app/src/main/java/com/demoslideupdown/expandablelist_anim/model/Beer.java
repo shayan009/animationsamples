@@ -6,19 +6,19 @@ public class Beer {
 
     private int id;
     private String name;
-          private List<Drink> drink;
+    private List<Drink> drink;
 
-    public Beer(int id, String name,List<Drink> drink) {
+    public Beer (int id, String name, List<Drink> drink) {
         this.id = id;
         this.name = name;
-        this.drink=drink;
+        this.drink = drink;
     }
 
-    public int getId() {
+    public int getId () {
         return id;
     }
 
-    public String getName() {
+    public String getName () {
         return name;
     }
 

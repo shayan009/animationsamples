@@ -1,4 +1,5 @@
 package com.demoslideupdown.expandablelist_anim.activity;
+
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -6,16 +7,20 @@ import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import com.demoslideupdown.expandablelist_anim.model.Beer;
-import com.demoslideupdown.expandablelist_anim.adapter.BeerAdapter;
-import com.demoslideupdown.expandablelist_anim.model.Drink;
-import com.demoslideupdown.expandablelist_anim.adapter.LiquorAdapter;
+
 import com.demoslideupdown.R;
+import com.demoslideupdown.expandablelist_anim.adapter.BeerAdapter;
+import com.demoslideupdown.expandablelist_anim.adapter.LiquorAdapter;
+import com.demoslideupdown.expandablelist_anim.model.Beer;
+import com.demoslideupdown.expandablelist_anim.model.Drink;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 import static com.demoslideupdown.utils.AnimUtils.animateViewToHide;
 import static com.demoslideupdown.utils.AnimUtils.animateViewToShow;
 import static com.demoslideupdown.utils.AnimUtils.slideDown;
@@ -57,6 +62,16 @@ public class ExpandableListAnimated extends AppCompatActivity {
 
     }
 
+    private void populateBeer () {
+        List<Beer> beers = new ArrayList<>();
+        beers.add(new Beer(0, "Domestic", null));
+        beers.add(new Beer(1, "Imported", null));
+        beers.add(new Beer(2, "Cider", null));
+        beers.add(new Beer(3, "Craft Beer", null));
+        BeerAdapter beerAdapter = new BeerAdapter(beers);
+        rvBeerList.setAdapter(beerAdapter);
+    }
+
     private void populateLiquor () {
         List<Beer> beers = new ArrayList<>();
 
@@ -79,16 +94,6 @@ public class ExpandableListAnimated extends AppCompatActivity {
         beers.add(new Beer(3, "Top Shelf", null));
         LiquorAdapter liquorAdapter = new LiquorAdapter(beers);
         rvLiquorList.setAdapter(liquorAdapter);
-    }
-
-    private void populateBeer () {
-        List<Beer> beers = new ArrayList<>();
-        beers.add(new Beer(0, "Domestic", null));
-        beers.add(new Beer(1, "Imported", null));
-        beers.add(new Beer(2, "Cider", null));
-        beers.add(new Beer(3, "Craft Beer", null));
-        BeerAdapter beerAdapter = new BeerAdapter(getApplicationContext(), beers);
-        rvBeerList.setAdapter(beerAdapter);
     }
 
     @OnClick(R.id.clBeer)

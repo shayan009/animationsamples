@@ -7,30 +7,30 @@
     android:background="@android:color/white"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="@dimen/_50dp"
-        android:orientation="horizontal"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/_50dp"
         android:background="@drawable/drawable_edit_profile_button"
         android:onClick="goToExpandedAnimated"
-        >
+        android:orientation="horizontal">
+
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Expandable List"
-            android:paddingStart="@dimen/_10dp"
-            android:gravity="center"
-            android:textColor="@android:color/white"
             android:background="@null"
-            />
-         <android.support.v7.widget.AppCompatImageView
-             android:layout_width="@dimen/_30dp"
-             android:layout_height="@dimen/_30dp"
-             android:layout_gravity="center"
-             app:srcCompat="@drawable/ic_chevron_right_black_24dp"
-             />
+            android:gravity="center"
+            android:paddingStart="@dimen/_10dp"
+            android:text="Expandable List"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_chevron_right_black_24dp" />
     </LinearLayout>
 
 </LinearLayout>
