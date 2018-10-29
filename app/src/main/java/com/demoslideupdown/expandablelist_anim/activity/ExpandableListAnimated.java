@@ -1,5 +1,6 @@
 package com.demoslideupdown.expandablelist_anim.activity;
 
+import android.animation.Animator;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -99,13 +100,56 @@ public class ExpandableListAnimated extends AppCompatActivity {
     void onCheckBeer () {
 
         if (beerBoolean) {
-            ivBeer.animate().rotation(-180).start();
-            slideDown(clLiquor, rvBeerList);
-            beerBoolean = false;
+            ivBeer.animate().rotationBy(-180)
+                    .setDuration(500)
+                    .setListener(new Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+                            beerBoolean = false;
+                        }
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            slideDown(clLiquor, rvBeerList);
+                        }
+
+                        @Override
+                        public void onAnimationCancel(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+
+                        }
+                    })
+                    .start();
+
         } else {
-            ivBeer.animate().rotation(0).start();
-            slideUp(clLiquor, rvBeerList);
-            beerBoolean = true;
+            ivBeer.animate().rotationBy(180).setDuration(500)
+                    .setListener(new Animator.AnimatorListener() {
+                        @Override
+                        public void onAnimationStart(Animator animation) {
+                            beerBoolean = true;
+                        }
+
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            slideUp(clLiquor, rvBeerList);
+
+                        }
+
+                        @Override
+                        public void onAnimationCancel(Animator animation) {
+
+                        }
+
+                        @Override
+                        public void onAnimationRepeat(Animator animation) {
+
+                        }
+                    })
+                    .start();
+
         }
 
     }
