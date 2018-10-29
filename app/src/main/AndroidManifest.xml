@@ -16,8 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".expandablelist_anim.activity.ExpandableListAnimated" />
-        <activity android:name=".shimmer.activity.ShimmerActivity"/>
+        <activity
+                android:name=".expandablelist_anim.activity.ExpandableListAnimated"
+                android:theme="@style/AppTheme"
+                android:windowSoftInputMode="adjustResize"
+        />
+        <activity android:name=".shimmer.activity.ShimmerActivity"
+                  android:theme="@style/AppTheme"
+                  android:windowSoftInputMode="adjustResize"
+        />
     </application>
 
 </manifest>
