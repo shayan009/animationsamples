@@ -4,51 +4,73 @@
 
     //data1
     <string name="got_titletext">I-League: Churchill Brothers Hold Minerva Punjab To A Goalless Draw</string>
-    <string name="got_image_url">https://images.pexels.com/photos/40753/military-raptor-jet-f-22-airplane-40753.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940</string>
+    <string name="got_image_url">
+        https://images.pexels.com/photos/40753/military-raptor-jet-f-22-airplane-40753.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940
+    </string>
     <string name="got_subtext">Indo-Asian News Service | Sunday October 28, 2018</string>
-    <string name="got_summarytext">Both teams struggled with the quality of their final passes and showed a distinct lack of imagination in attack throughout the 90 minutes.</string>
+    <string name="got_summarytext">Both teams struggled with the quality of their final passes and showed a distinct
+        lack of imagination in attack throughout the 90 minutes.
+    </string>
 
     //data2
     <string name="ndtv_titletext">Once India\'s Hope In Asian Games, Boxer Sells Kulfi On Haryana Streets</string>
     <string name="ndtv_subtext">Edited by Jimmy Jacob | Sunday October 28, 2018, Bhiwani</string>
     <string name="ndtv_image_url">https://images.pexels.com/photos/1277397/pexels-photo-1277397.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940</string>
-    <string name="ndtv_summarytext">These days, 30-year-old Dinesh Kumar, an Asian Games silver medallist and recipient of the Arjuna Award in 2010, sells ice-cream on the streets of Haryana\'s Bhiwani to the very people who once cheered for him on national television.
-     </string>
+    <string name="ndtv_summarytext">These days, 30-year-old Dinesh Kumar, an Asian Games silver medallist and recipient
+        of the Arjuna Award in 2010, sells ice-cream on the streets of Haryana\'s Bhiwani to the very people who once
+        cheered for him on national television.
+    </string>
 
     //data3
     <string name="op_titletext">IndiGo, SpiceJet, GoAir Offer Discount On Domestic Flight Tickets. Details Here</string>
     <string name="op_subtext">NDTV Profit Team | Sunday October 28, 2018</string>
     <string name="op_image_url">https://images.pexels.com/photos/1266017/pexels-photo-1266017.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940</string>
-    <string name="op_summarytext">IndiGo, GoAir, SpiceJet and AirAsia India are offering a host of discount offers on domestic and international flight tickets.</string>
+    <string name="op_summarytext">IndiGo, GoAir, SpiceJet and AirAsia India are offering a host of discount offers on
+        domestic and international flight tickets.
+    </string>
 
     //data4
     <string name="jet_titletext">Indian-Origin Man Gets 6-Year Jail In UK For Harassing Woman For 5 Years</string>
     <string name="jet_subtext">Press Trust of India | Sunday October 28, 2018, London</string>
     <string name="jet_image_url">https://images.pexels.com/photos/350614/pexels-photo-350614.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940</string>
-    <string name="jet_summarytext">An Indian-origin man who waged a long campaign of harassment and intimidation against a woman in London has been sentenced to six years.</string>
+    <string name="jet_summarytext">An Indian-origin man who waged a long campaign of harassment and intimidation against
+        a woman in London has been sentenced to six years.
+    </string>
 
     //data5
     <string name="note5_titletext">Pittsburgh Gunman Who Killed 11 Spoke Of "Genocide, Desire To Kill Jews"</string>
     <string name="note5_image_url">https://images.pexels.com/photos/64699/pexels-photo-64699.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940</string>
     <string name="note5_subtext">Agence France-Presse | Sunday October 28, 2018, Pittsburgh, United States</string>
-    <string name="note5_summarytext">The Pittsburgh synagogue gunman spoke of "genocide and his desire to kill Jewish people" during his attack, authorities said Sunday, as they identified his 11 victims and worked to console the living.</string>
+    <string name="note5_summarytext">The Pittsburgh synagogue gunman spoke of "genocide and his desire to kill Jewish
+        people" during his attack, authorities said Sunday, as they identified his 11 victims and worked to console the
+        living.
+    </string>
 
     //data6
     <string name="on7_titletext">No Pressure On India To Buy F-16 Fighter Jets, Says US Envoy</string>
-    <string name="on7_image_url">https://c.ndtvimg.com/5kncne88_lockheed-martin-f-16_120x90_04_September_18.jpg?downsize=150:113&amp;output-quality=70&amp;output-format=webp</string>
+    <string name="on7_image_url">
+        https://c.ndtvimg.com/5kncne88_lockheed-martin-f-16_120x90_04_September_18.jpg?downsize=150:113&amp;output-quality=70&amp;output-format=webp
+    </string>
     <string name="on7_subtext">Press Trust of India | Sunday October 28, 2018, Mumbai</string>
-    <string name="on7_summarytext">The United States is not going to put pressure on India to buy F-16 fighter jets or any other defence system, a senior US diplomat has said.</string>
+    <string name="on7_summarytext">The United States is not going to put pressure on India to buy F-16 fighter jets or
+        any other defence system, a senior US diplomat has said.
+    </string>
 
     //data7
     <string name="pix_titletext">Civil Service Aspirant From Tamil Nadu Found Hanging In Delhi Flat</string>
     <string name="pix_image_url">https://c.ndtvimg.com/delhi-police_120x90_1530468133228.jpg?downsize=150:113&amp;output-quality=70&amp;output-format=webp</string>
     <string name="pix_subtext">Press Trust of India | Sunday October 28, 2018, New Delhi</string>
-    <string name="pix_summarytext">A 20-year-old civil service aspirant allegedly hung herself to death at her rented flat in central Delhi\'s Karol Bagh area, police said Sunday.</string>
+    <string name="pix_summarytext">A 20-year-old civil service aspirant allegedly hung herself to death at her rented
+        flat in central Delhi\'s Karol Bagh area, police said Sunday.
+    </string>
 
     //data8
     <string name="i6_titletext">In Japan, PM Modi Gets A Grand Welcome - And Chopsticks Lessons</string>
-    <string name="i6_image_url"><![CDATA[https://c.ndtvimg.com/2018–10/93obundc_pm-modi-shinzo-abe-twitter_120x90_28_October_18.jpg?downsize=150:113&output-quality=70&output-format=webp]]></string>
+    <string name="i6_image_url">
+        <![CDATA[https://c.ndtvimg.com/2018–10/93obundc_pm-modi-shinzo-abe-twitter_120x90_28_October_18.jpg?downsize=150:113&output-quality=70&output-format=webp]]></string>
     <string name="i6_subtext">Edited by Aditya Sharma | Sunday October 28, 2018, New Delhi</string>
-    <string name="i6_summarytext">Prime Minister Narendra Modi and his Japanese counterpart Shinzo Abe met for the twelfth time today since their first meeting in September 2014.</string>
-    
+    <string name="i6_summarytext">Prime Minister Narendra Modi and his Japanese counterpart Shinzo Abe met for the
+        twelfth time today since their first meeting in September 2014.
+    </string>
+
 </resources>

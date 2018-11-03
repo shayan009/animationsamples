@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.demoslideupdown.expandablelist_anim.activity.ExpandableListAnimated;
+import com.demoslideupdown.gesture.GestureActivity;
 import com.demoslideupdown.shimmer.activity.ShimmerActivity;
 
 import butterknife.BindView;
@@ -42,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements OnOptionClickList
                 break;
             case 2:
                 startActivity(new Intent(context,ShimmerActivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(context,GestureActivity.class));
                 break;
             default:
                 Toast.makeText(context, "Wrong Options", Toast.LENGTH_SHORT).show();

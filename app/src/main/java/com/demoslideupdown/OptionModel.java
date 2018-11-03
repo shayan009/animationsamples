@@ -25,7 +25,8 @@ public class OptionModel {
     public static List<OptionModel> getOptions() {
         return Arrays.asList(
                 new OptionModel(1, "Expandable List") ,
-                new OptionModel(2, "Shimmer Effect")
+                new OptionModel(2, "Shimmer Effect"),
+                new OptionModel(3, "Gesture Effect")
         );
     }
 }
