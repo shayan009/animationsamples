@@ -96,6 +96,7 @@ public class ExpandableListAnimated extends AppCompatActivity {
         rvLiquorList.setAdapter(liquorAdapter);
     }
 
+    
     @OnClick(R.id.clBeer)
     void onCheckBeer () {
 
